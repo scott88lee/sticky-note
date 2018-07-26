@@ -5,7 +5,11 @@
 	<link rel='stylesheet' href='style.css'>
 </head>
 <body>
-	<h1>Sticky Note</h1>
+	<div id='board'>
+		<h1>Sticky Note</h1>
+		<input id='searchInput' type="text" placeholder="Search title" onkeyup="searchTitles()">
+		<button id='addNote'>Add Sticky Note</button>
+	</div>
 	<script src='script.js'></script>
 </body>
 </html>
