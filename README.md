@@ -5,7 +5,10 @@ StickyNote is a basic browser based app to create, edit & delete sticky notes,
 with the ability to store and retrieve notes from the browser local storage. Also made to be responsive on mobile phones.
 
 Built only with plain Javascript, HTML5, CSS3, with consideration to be cross browser compaitable. 
-tgcorbeaux@maltem.com
+
+Working demo here :
+https://scott88lee.github.io/sticky-note/
+
 
 Features
 --------
@@ -22,6 +25,7 @@ Installation
 
 1. Make sure index.html, style.css and script.js are in the same folder
 2. Load up index.html in the browser.
+
 
 Contribute
 ----------
