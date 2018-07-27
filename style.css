@@ -1,18 +1,34 @@
 body {
 	padding: 10px;
+	font-family: "Comic Sans MS";
 }
 
 #board {
 	border-radius: 10px;
 	width: 100%;
-	height: 300px;
 	background-color: grey;
+}
+
+button {
+   border-radius: 20px;
+   color: #000000;
+   font-family: 'Comic Sans MS';
+   font-size: 40px;
+   font-weight: 100;
+   padding: 40px;
+   background-color: #F6F1E2;
+}
+
+.nav {
+	padding: 10px;
+	margin: 10px;
 }
 
 .note {
 	display: inline-block;
-	margin-right: 10px;
 	margin-bottom: 10px;
+	margin-left: 20px;
+	margin-right: 0px;
 	vertical-align: top;
 	width: 150px;
 	height: 150px;
@@ -34,6 +50,33 @@ body {
 
 .delNote {
 	position: absolute;
-	top: 2px;
-	right: 3px;
+	top: 1px;
+	right: 6px;
+}
+
+.addDelete {
+	display: inline-block;
+}
+
+#searchInput {
+	width: 190px;
+}
+
+@media (max-width: 600px) {
+    h1 {
+    	font-size: 30px;
+    }
+
+    .nav {
+    	text-align: center;
+    }
+
+    button {
+    	height: 20px;
+    	width: 200px;
+    }
+    .addDelete {
+    	display: block;
+    }
+
 }

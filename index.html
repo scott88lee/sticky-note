@@ -3,14 +3,18 @@
 <head>
 	<title>Sticky Note</title>
 	<link rel='stylesheet' href='style.css'>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
 	<div id='board'>
-		<h1>Sticky Note</h1>
-		<input id='searchInput' type="text" placeholder="Search title" onkeyup="searchTitles()">
-		<button id='addNote'>Add Sticky Note</button>
-		<button onclick="saveData()">Save board</button>
-		<button onclick="retrieveData()">Retrieve board</button>
+		<div class="nav">
+			<h1>Sticky Note</h1>
+			<input id='searchInput' type="text" placeholder="Search title" onkeyup="searchTitles()">
+			<button id='addNote'>Add Sticky Note</button>
+			<div class='addDelete'>
+			<button onclick="saveData()">Save board</button>
+			<button onclick="retrieveData()">Retrieve board</button></div>
+		</div>
 	</div>
 	<script src='script.js'></script>
 </body>

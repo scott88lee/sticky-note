@@ -5,28 +5,35 @@ var btnAddNote = document.getElementById('addNote');
 btnAddNote.addEventListener('click', function() {appendNote()});
 
 function appendNote(storedTitle, storedContent) {
+	//Creating sticky note
 	var newNote = document.createElement('div');
 	newNote.className = 'note';
 	board.appendChild(newNote);
 
+	//Creating title input
 	var title = document.createElement('input');
 	title.placeholder = 'Title';
 	title.className = 'titleInput';
 	newNote.appendChild(title);
 
+	//Value assigned when recalled from storage
 	if (storedTitle) {
 		title.value = storedTitle;
 	}
 
+	//Textarea creation
 	var content = document.createElement('textarea');
 	content.rows = '8';
 	content.className = 'noteContent';
 	content.textContent = 'Remember to....'
 	newNote.appendChild(content);
 
+	//Value assigned when recalled from storage
 	if (storedContent) {
 		content.value = storedContent;
 	}
+
+	// Clickable div to delete sticky note
 	var delNote = document.createElement('a');
 	delNote.className = 'delNote';
 	delNote.textContent = 'X'
@@ -37,7 +44,7 @@ function appendNote(storedTitle, storedContent) {
 	});
 }
 
-function clearBoard() {
+function clearBoard() { //Clears the board
 	var noteList = document.getElementsByClassName('note');
 	for (var i=noteList.length-1; i>=0; i--){
 		board.removeChild(noteList[i]);
@@ -88,8 +95,7 @@ function retrieveData(){
 	clearBoard();
 
 	for (var i=0; i<titles.length; i++){ //Populate
-		console.log(titles[i]);
-		console.log(contents[i]);
+		//Creates sticky notes with retrieved data
 		appendNote(titles[i], contents[i]);
 	}
 }
